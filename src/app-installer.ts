@@ -1,8 +1,8 @@
 import * as core from '@actions/core'
-import * as tc from '@actions/tool-cache'
 import * as fs from 'fs'
 import * as os from 'os'
 import * as path from 'path'
+import * as tc from '@actions/tool-cache'
 
 export async function install(version: string): Promise<void> {
   const toolName = 'yq'
