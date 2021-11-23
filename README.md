@@ -7,11 +7,11 @@ This action sets up the yq tool. It downloads yq binaries from https://github.co
 # Usage
 ## Set up default yq version (v4.4.1)
 ```yaml
-- uses: md-actions/setup-yq@v1.0.0
+- uses: md-actions/setup-yq@v1
 ```
 ## Set up specific yq version
 ```yaml
-- uses: md-actions/setup-yq@v1.0.0
+- uses: md-actions/setup-yq@v1
   with:
     version: 4.5.0
 ```
