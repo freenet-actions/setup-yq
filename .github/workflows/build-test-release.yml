@@ -36,9 +36,9 @@ jobs:
     - name: run test
       uses: ./
   release:
+    if: github.event_name == 'workflow_dispatch'
     name: Publish new release
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch'
     needs: test
     steps:
     - uses: actions/checkout@v2
@@ -51,9 +51,12 @@ jobs:
        git add dist
        git commit --allow-empty -m "new release"
        PACKAGE_VERSION=$(node -p "require('./package.json').version")
+       MAIN_PACKAGE_VERSION=$(node -p "require('./package.json').version[0]")
        git tag -fa v$PACKAGE_VERSION -m "Update tag"
        git push origin v$PACKAGE_VERSION --force
+       git tag -fa v$MAIN_PACKAGE_VERSION -m "Update tag"
+       git push origin v$MAIN_PACKAGE_VERSION --force
     - name: Increment Version
       run: |
-       npm version patch
+       npm version patch --force
        git push --force
