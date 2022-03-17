@@ -16,6 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
+          npm install @typescript-eslint/eslint-plugin@latest --save-dev
           npm install
       - run: |
           npm run all
