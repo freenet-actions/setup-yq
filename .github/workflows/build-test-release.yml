@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-          npm install
+          npm install @typescript-eslint/eslint-plugin@latest --save-dev --legacy-peer-deps
       - run: |
           npm run all
       - uses: actions/upload-artifact@v2
