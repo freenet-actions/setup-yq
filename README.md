@@ -5,13 +5,13 @@ This action sets up the yq tool. It downloads yq binaries from https://github.co
 
    
 # Usage
-## Set up default yq version (v4.4.1)
+## Set up default yq version (v4.25.1)
 ```yaml
-- uses: freenet-actions/setup-yq@v1
+- uses: freenet-actions/setup-yq@v2
 ```
 ## Set up specific yq version
 ```yaml
-- uses: freenet-actions/setup-yq@v1
+- uses: freenet-actions/setup-yq@v2
   with:
-    version: 4.5.0
+    version: 4.25.1
 ```
