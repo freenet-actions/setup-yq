@@ -2,7 +2,7 @@ import * as core from '@actions/core'
 import * as fs from 'fs'
 import * as os from 'os'
 import * as path from 'path'
-import * as installer from '../src/app-installer'
+import * as {installer} from '../src/app-installer'
 
 describe('app installer tests', () => {
   it('check the installation', async () => {
