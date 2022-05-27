@@ -1,6 +1,6 @@
 name: 'setup-yq'
 description: 'Install yq parser'
-author: 'mobilcom-debitel'
+author: 'freenet'
 inputs:
   version: 
     required: true
