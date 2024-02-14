@@ -5,7 +5,7 @@ inputs:
   version: 
     required: true
     description: 'Version of yq'
-    default: '4.40.5'
+    default: '4.40.7'
 runs:
   using: 'node20'
   main: 'dist/index.js'
