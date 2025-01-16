@@ -28,7 +28,7 @@
     "json-schema": ">=0.4.0",
     "tmpl": ">=1.0.5",
     "@actions/core": "1.11.1",
-    "@actions/tool-cache": "2.0.1"
+    "@actions/tool-cache": "2.0.2"
   },
   "devDependencies": {
     "@types/jest": "28.1.8",
