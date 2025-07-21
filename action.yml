@@ -2,10 +2,10 @@ name: 'setup-yq'
 description: 'Install yq parser'
 author: 'freenet'
 inputs:
-  version: 
+  version:
     required: true
     description: 'Version of yq'
-    default: '4.44.6'
+    default: 'v4.46.1'
 runs:
   using: 'node20'
   main: 'dist/index.js'
