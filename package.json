@@ -44,6 +44,6 @@
     "prettier": "3.6.2",
     "eslint-plugin-prettier": "5.5.4",
     "ts-jest": "28.0.8",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   }
 }
