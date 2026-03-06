@@ -4,7 +4,7 @@
 
 This action sets up the yq tool. It downloads yq binaries from https://github.com/mikefarah/yq/releases and adds path to PATH
 
-If you're using GitHub-hosted runners in your workflow, you probably don't need this (see "Included Software" on https://github.com/actions/runner-images).
+If you're using GitHub-hosted runners in your workflow, you probably don't need this (see "Included Software" on https://github.com/actions/runner-images), unless you want to downgrade/pin the version.
 
 # Usage
 ## Set up yq with default version (v4.46.1)
