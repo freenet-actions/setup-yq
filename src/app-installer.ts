@@ -27,7 +27,9 @@ function getDownloadUrl(version: string, tool: string): string {
     win32: 'windows'
   }
   const archMap: {[arch: string]: string} = {
-    x64: 'amd64'
+    x64: 'amd64',
+    arm64: 'arm64', // Not tested
+    arm: 'arm' // Not tested
   }
   const arch = archMap[os.arch()]
   const platform = platformMap[os.platform()]
