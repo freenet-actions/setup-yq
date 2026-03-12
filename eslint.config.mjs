@@ -28,6 +28,7 @@ export default defineConfig([
     rules: {
       'eslint-comments/no-use': 'off',
       'import/no-namespace': 'off',
+      'no-console': 'warn',
       'no-unused-vars': 'off',
       '@stylistic/function-call-spacing': ['error', 'never'],
       '@stylistic/semi': ['error', 'never'],

@@ -53,8 +53,12 @@ async function getBinary(
     let downloadPath: string | null = null
     try {
       downloadPath = await tc.downloadTool(url)
-    } catch (error: any) {
-      core.debug(error)
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        core.debug(`Error message: ${error.message}`)
+      } else {
+        core.debug(`Unknown error: ${error}`)
+      }
       throw new Error(`Failed to download version ${version}: ${error}`)
     }
 
