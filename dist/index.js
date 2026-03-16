@@ -76,7 +76,9 @@ function getDownloadUrl(version, tool) {
         win32: 'windows'
     };
     const archMap = {
-        x64: 'amd64'
+        x64: 'amd64',
+        arm64: 'arm64', // Not tested
+        arm: 'arm' // Not tested
     };
     const arch = archMap[os.arch()];
     const platform = platformMap[os.platform()];
@@ -98,7 +100,12 @@ function getBinary(toolName, version, url) {
                 downloadPath = yield tc.downloadTool(url);
             }
             catch (error) {
-                core.debug(error);
+                if (error instanceof Error) {
+                    core.debug(`Error message: ${error.message}`);
+                }
+                else {
+                    core.debug(`Unknown error: ${error}`);
+                }
                 throw new Error(`Failed to download version ${version}: ${error}`);
             }
             cachedToolpath = yield tc.cacheFile(downloadPath, toolName + getExecutableExtension(), toolName, version);
@@ -176,7 +183,12 @@ function run() {
             yield installer.install(version);
         }
         catch (error) {
-            core.setFailed(error.message);
+            if (error instanceof Error) {
+                core.setFailed(error.message);
+            }
+            else {
+                core.setFailed('An unknown error occurred.');
+            }
         }
     });
 }
