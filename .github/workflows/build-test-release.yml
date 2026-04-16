@@ -20,7 +20,7 @@ jobs:
         with:
           node-version-file: .nvmrc
       - name: 📦 Install Dependencies
-        run: npm i @typescript-eslint/eslint-plugin@latest --save-dev --legacy-peer-deps --ignore-scripts
+        run: npm ci --ignore-scripts
       - name: 🚧 Run All Tests
         run: npm run all
       - name: ⬆️ Upload Artifact
