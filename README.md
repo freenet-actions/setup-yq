@@ -7,13 +7,13 @@ This action sets up the yq tool. It downloads yq binaries from https://github.co
 If you're using GitHub-hosted runners in your workflow, you probably don't need this (see "Included Software" on https://github.com/actions/runner-images), unless you want to downgrade/pin the version.
 
 # Usage
-## Set up yq with default version (v4.46.1)
+## Set up yq with default version (v4.52.5)
 ```yaml
-- uses: freenet-actions/setup-yq@v3
+- uses: freenet-actions/setup-yq@v4.0.0
 ```
 ## Set up specific yq version
 ```yaml
-- uses: freenet-actions/setup-yq@v3
+- uses: freenet-actions/setup-yq@v4.0.0
   with:
-    version: 4.46.1
+    version: 4.52.5
 ```
